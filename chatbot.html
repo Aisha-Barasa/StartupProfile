@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GlowUp Chatbot</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff0f5;
+    }
+
+    .chatbot-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .chatbot-button {
+      background-color: #FF3CAC;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .chatbot-button:hover {
+      background-color: #e13c9f;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Chatbot UI Trigger -->
+  <div class="chatbot-container">
+    <button class="chatbot-button" onclick="launchGlowBot()">💬 Chat with GlowBot</button>
+  </div>
+
+  <!-- Puter.js -->
+  <script src="https://js.puter.com/v2/"></script>
+  <script>
+    function launchGlowBot() {
+      puter.ai.chat({
+        systemPrompt: `
+          You are GlowBot, the friendly and trendy assistant for GlowUp – a Gen Z-focused skincare brand. 
+          You answer questions about skin care routines, products, shipping, returns, and GlowUp’s mission with an upbeat, Gen Z tone. 
+          Be helpful, kind, fun, and use emojis when appropriate.
+        `,
+        title: "GlowBot - Your Skincare BFF 💅",
+        theme: {
+          primary: "#FF3CAC",
+          fontFamily: "Poppins, sans-serif"
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
+<!--     <div class="product-card">
+ -->

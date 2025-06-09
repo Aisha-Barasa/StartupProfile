@@ -1,282 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GlowUp</title>
-    <style>
-        header {
-            background-color: transparent;
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-            font-size: 26px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GlowUp</title>
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #1f1f1f;
+      background-color: #fff;
+      scroll-behavior: smooth;
+    }
 
-        nav {
-            background-color: transparent;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav a {
-            color: black;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 20px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-            color: fuchsia;
-        }
-        body{
-            background-image: url("b2.jpeg");
-            background-size: cover;
-            background-position: center center;
-            background-attachment: fixed;
-        }
+    /* Navbar */
+    nav {
+      background-color: transparent;
+      padding: 15px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 18px;
+      font-size: 18px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #FF3CAC;
+      text-decoration: underline;
+    }
 
-        p{
-            text-align: center;
-            font-size: 30px;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-
-        .button {
-            
-            background-color: 	#FF3CAC;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-align: center;
-            display: inline-block;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        .button:hover {
-            background-color: #f0f0f0;
-            color: fuchsia;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 200px;
-        }
-
-        
-
-        h1 {
+    /* Hero Section */
+    header.hero {
+      background-image: url("b2.jpeg");
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 0 20px;
+      text-shadow: 1.5px 1.5px 5px rgba(0,0,0,0.7);
+    }
+    header.hero h1 {
       font-size: 64px;
       font-weight: 700;
-      color: #FF3CAC;
       margin-bottom: 10px;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+      color: #FF3CAC;
+      font-style: italic;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    }
+    header.hero h3 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      font-weight: 500;
+      font-family: 'Lucida Sans', sans-serif;
+    }
+    header.hero p {
+      font-size: 24px;
+      margin-bottom: 35px;
+      font-family: 'Lucida Sans', sans-serif;
+    }
+    header.hero .button {
+      background-color: #FF3CAC;
+      color: white;
+      padding: 14px 30px;
+      border-radius: 30px;
+      font-size: 20px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(255, 60, 108, 0.5);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    header.hero .button:hover {
+      background-color: #f0f0f0;
+      color: #FF3CAC;
+      box-shadow: 0 4px 12px rgba(255, 60, 108, 0.8);
     }
 
-        h3{
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            font-size: 30px;
-            
-        }
-
-    </style>
-</head>
-<body>
-    <nav>
-    <a href="#">Home</a>
-    <a href="about.html">About us</a>
-    <a href="products.html">Products</a>
-    <a href="contact.html">Contact</a>
-    <a href="faq.html">FAQ</a>
-    </nav>
-    <h1><i>GlowUp</i></h1>
-    <h3>Skincare Brand for Genz</h3>
-    <p>Where Self-Care meets Skin-Care</p>
-   
-
-    <div class="container">
-        <button class="button">Shop Now</button>
-    </div>
-
-    
-    
-
-
-
-
-
-
-
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>GlowUp Testimonials Carousel</title>
-      <style>
-        body {
-          font-family: 'Poppins', sans-serif;
-          background-color: #fff0f5;
-          margin: 0;
-          padding: 0;
-          color: #1f1f1f;
-        }
-    
-        .carousel-section {
-          max-width: 1000px;
-          margin: 0 auto;
-          padding: 60px 20px;
-          text-align: center;
-        }
-    
-        .carousel-title {
-          font-size: 2rem;
-          color: #ff3cac;
-          margin-bottom: 30px;
-        }
-    
-        .carousel {
-          display: flex;
-          overflow-x: auto;
-          gap: 20px;
-          padding-bottom: 10px;
-          scroll-snap-type: x mandatory;
-          -webkit-overflow-scrolling: touch;
-        }
-    
-        .testimonial {
-          flex: 0 0 80%;
-          max-width: 300px;
-          background-color: #ffffff;
-          border-radius: 16px;
-          padding: 25px;
-          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
-          scroll-snap-align: start;
-          transition: transform 0.3s ease;
-        }
-    
-        .testimonial:hover {
-          transform: translateY(-5px);
-        }
-    
-        .testimonial p {
-          font-size: 1rem;
-          margin-bottom: 12px;
-          color: #333;
-        }
-    
-        .author {
-          font-size: 0.875rem;
-          color: #ff3cac;
-          font-weight: bold;
-        }
-      </style>
-    </head>
-    <body>
-    
-      <section class="carousel-section">
-        <h2 class="carousel-title">What Our Glow Babes Say 💖</h2>
-        
-        <div class="carousel">
-          <div class="testimonial">
-            <p>"GlowUp’s serum is literally magic — my skin has *never* felt this good. It’s my new obsession."</p>
-            <span class="author">— Amara, 21</span>
-          </div>
-          <div class="testimonial">
-            <p>"No more filters — I feel confident bare-faced now thanks to GlowUp. Real results, real glow."</p>
-            <span class="author">— Jade, 19</span>
-          </div>
-          <div class="testimonial">
-            <p>"Love the vibe, love the ingredients. My morning routine is now my favorite part of the day!"</p>
-            <span class="author">— Zuri, 23</span>
-          </div>
-        </div>
-      </section>
-    
-    </body>
-    </html>
-   
-
-</body>
-</html>
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Meet the Team - GlowUp</title>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #fff;
-      color: #333;
-      margin: 0;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .team-section {
-      max-width: 1200px;
+    /* Section separators */
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
       margin: auto;
     }
 
-    .team-section h2 {
-      font-size: 36px;
+    /* Testimonials Carousel */
+    .carousel-section {
+      background-color: #fff0f5;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(255, 60, 108, 0.1);
+      margin-bottom: 60px;
+      text-align: center;
+    }
+    .carousel-title {
+      font-size: 2.5rem;
       color: #FF3CAC;
       margin-bottom: 40px;
+      font-weight: 700;
+    }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 25px;
+      padding-bottom: 15px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: #FF3CAC #fce8f7;
+    }
+    .carousel::-webkit-scrollbar {
+      height: 8px;
+    }
+    .carousel::-webkit-scrollbar-thumb {
+      background-color: #FF3CAC;
+      border-radius: 4px;
+    }
+    .testimonial {
+      flex: 0 0 280px;
+      background-color: #ffffff;
+      border-radius: 16px;
+      padding: 30px 25px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.07);
+      scroll-snap-align: start;
+      transition: transform 0.3s ease;
+      font-size: 1rem;
+      color: #444;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .testimonial:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 12px 20px rgba(255, 60, 108, 0.2);
+    }
+    .testimonial p {
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    .author {
+      font-size: 0.9rem;
+      color: #FF3CAC;
+      font-weight: 700;
+      text-align: right;
     }
 
+    /* Meet the Team */
+    .team-section h2 {
+      font-size: 2.75rem;
+      color: #FF3CAC;
+      margin-bottom: 50px;
+      font-weight: 700;
+    }
     .team-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 40px;
+      gap: 50px;
     }
-
     .team-member {
       background-color: #fef0f5;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(255, 60, 108, 0.1);
       width: 280px;
-      padding: 20px;
+      padding: 25px 20px;
       text-align: center;
       transition: transform 0.3s ease;
     }
-
     .team-member:hover {
-      transform: translateY(-5px);
+      transform: translateY(-7px);
+      box-shadow: 0 12px 25px rgba(255, 60, 108, 0.25);
     }
-
     .team-member img {
-      width: 120px;
-      height: 120px;
+      width: 130px;
+      height: 130px;
       object-fit: cover;
       border-radius: 50%;
-      border: 4px solid #FF3CAC;
-      margin-bottom: 15px;
+      border: 5px solid #FF3CAC;
+      margin-bottom: 20px;
     }
-
     .team-member h3 {
       font-size: 22px;
       color: #333;
-      margin: 10px 0 5px;
+      margin: 10px 0 8px;
+      font-weight: 700;
     }
-
     .team-member p.title {
       font-size: 16px;
-      color: #888;
-      margin-bottom: 10px;
+      color: #666;
+      margin-bottom: 15px;
+      font-weight: 600;
+      font-style: italic;
     }
-
     .team-member p.desc {
-      font-size: 14px;
+      font-size: 15px;
       color: #555;
+      line-height: 1.4;
     }
 
-    @media (max-width: 700px) {
+    /* Responsive */
+    @media (max-width: 750px) {
+      .carousel {
+        gap: 15px;
+      }
+      .testimonial, .team-member {
+        flex: 0 0 90%;
+      }
       .team-container {
         flex-direction: column;
         align-items: center;
@@ -286,104 +231,120 @@
 </head>
 <body>
 
-  <section class="team-section">
-    <h2>Meet the GlowUp Team</h2>
-    <div class="team-container">
-      <div class="team-member">
-        <img src="Aisha.jpg" alt="Aisha">
-        <h3>Aisha Barasa</h3>
-        <p class="title">Founder & Creative Director</p>
-        <p class="desc">Aisha’s vision gave birth to GlowUp. She's obsessed with skincare, aesthetics, and Gen Z vibes that actually pop.</p>
-      </div>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About us</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a>
+  </nav>
 
-      <div class="team-member">
-        <img src="Nutnell.jpg" alt="Zara">
-        <h3>Nathaniel Wangai</h3>
-        <p class="title">Brand & Marketing Lead</p>
-        <p class="desc">Nathaniel is the energy behind the brand—building hype, designing drops, and keeping everything GlowUp on everyone's feed.</p>
+  <!-- Hero Section -->
+  <header id="hero" class="hero">
+    <h1><i>GlowUp</i></h1>
+    <h3>Skincare Brand for Gen Z</h3>
+    <p>Where Self-Care meets Skin-Care</p>
+    <a href="products.html" class="button">Shop Now</a>
+
+  </header>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="carousel-section">
+    <h2 class="carousel-title">What Our Glow Babes Say 💖</h2>
+    <div class="carousel">
+      <div class="testimonial">
+        <p>"GlowUp’s serum is literally magic — my skin has *never* felt this good. It’s my new obsession."</p>
+        <span class="author">— Amara, 21</span>
+      </div>
+      <div class="testimonial">
+        <p>"No more filters — I feel confident bare-faced now thanks to GlowUp. Real results, real glow."</p>
+        <span class="author">— Jade, 19</span>
+      </div>
+      <div class="testimonial">
+        <p>"Love the vibe, love the ingredients. My morning routine is now my favorite part of the day!"</p>
+        <span class="author">— Zuri, 23</span>
       </div>
     </div>
   </section>
 
+    <!-- Meet the Team Section -->
+    <section id="team" class="team-section">
+      <h2>Meet the GlowUp Team</h2>
+      <div class="team-container">
+        <div class="team-member">
+          <img src="Aisha.jpg" alt="Founder & CEO">
+          <h3>Aisha Barasa/h3>
+          <p class="title">Founder & CEO</p>
+          <p class="desc">Passionate about empowering others through skincare and self-love.</p>
+        </div>
+        <div class="team-member">
+          <img src="Nutnell.jpg" alt="Marketing">
+          <h3>Nathaniel Wangai</h3>
+          <p class="title">Marketing Director</p>
+          <p class="desc">Creating buzz and building our GlowUp community.</p>
+        </div>
+        
+      </div>
+
+       <!-- Chatbot -->
+    <section id="chat" class="Chatbot-section">
+      <h2>Chat with Us!</h2>
+
+      <style>
+        body {
+          font-family: 'Poppins', sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #fff0f5;
+        }
+    
+        .chatbot-container {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          z-index: 999;
+        }
+    
+        .chatbot-button {
+          background-color: #FF3CAC;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 30px;
+          cursor: pointer;
+          font-size: 16px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+    
+        .chatbot-button:hover {
+          background-color: #e13c9f;
+        }
+      </style>
+      <div class="chatbot-container">
+        <button class="chatbot-button" onclick="launchGlowBot()">💬 Chat with GlowBot</button>
+      </div>
+    
+      <!-- Puter.js -->
+      <script src="https://js.puter.com/v2/"></script>
+      <script>
+        function launchGlowBot() {
+          puter.ai.chat({
+            systemPrompt: `
+              You are GlowBot, the friendly and trendy assistant for GlowUp – a Gen Z-focused skincare brand. 
+              You answer questions about skin care routines, products, shipping, returns, and GlowUp’s mission with an upbeat, Gen Z tone. 
+              Be helpful, kind, fun, and use emojis when appropriate.
+            `,
+            title: "GlowBot - Your Skincare BFF 💅",
+            theme: {
+              primary: "#FF3CAC",
+              fontFamily: "Poppins, sans-serif"
+            }
+        });
+    }
+  </script>
+
 </body>
 </html>
 
- <!-- 
-        </div>
-     -->
-
-     <!-- Footer Section -->
-<footer id="footer">
-    <div class="footer-content">
-      <h3>GlowUp</h3>
-      <p>Glow today. Shine tomorrow. Confidence always.</p>
-  
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="product.html">Products</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="contact.html">Contact</a>
-      </div>
-  
-      <div class="social-icons">
-        <a href="https://instagram.com/yourhandle" target="_blank">Instagram</a>
-        <a href="https://tiktok.com/@yourhandle" target="_blank">TikTok</a>
-        <a href="mailto:youremail@example.com">Email</a>
-      </div>
-    </div>
-  
-    <p class="copyright">© 2025 GlowUp. All rights reserved.</p>
-  </footer>
-  
-  <style>
-    #footer {
-      background-color: #ffe6f0;
-      color: #333;
-      padding: 60px 20px 30px;
-      text-align: center;
-      font-family: 'Poppins', sans-serif;
-    }
-  
-    .footer-content h3 {
-      color: #ff3cac;
-      margin-bottom: 10px;
-      font-size: 1.5rem;
-    }
-  
-    .footer-content p {
-      font-size: 0.95rem;
-      margin-bottom: 20px;
-      color: #555;
-    }
-  
-    .footer-links,
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-  
-    .footer-links a,
-    .social-icons a {
-      color: #784ba0;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-  
-    .footer-links a:hover,
-    .social-icons a:hover {
-      color: #ff3cac;
-    }
-  
-    .copyright {
-      font-size: 0.8rem;
-      color: #888;
-      margin-top: 10px;
-    }
-  </style>
-  </body>
-  </html>
+     
