@@ -1,0 +1,62 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff0f5;
+    margin: 0;
+    padding: 0;
+    color: #1f1f1f;
+  }
+  
+  .carousel-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .carousel-title {
+    font-size: 2rem;
+    color: #ff3cac;
+    margin-bottom: 30px;
+  }
+  
+  .carousel {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    display: flex;
+  }
+  
+  .carousel-track {
+    display: flex;
+    gap: 20px;
+    scroll-snap-align: center;
+    padding-bottom: 20px;
+  }
+  
+  .testimonial {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 25px;
+    min-width: 280px;
+    max-width: 300px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial:hover {
+    transform: translateY(-5px);
+  }
+  
+  .testimonial p {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: #333;
+  }
+  
+  .author {
+    font-size: 0.875rem;
+    color: #ff3cac;
+    font-weight: bold;
+  }
+  

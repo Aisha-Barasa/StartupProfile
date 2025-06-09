@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - GlowUp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: floralwhite;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #FFD6E8;
+            margin-bottom: 30px;
+        }
+
+        .faq-item {
+            background-color:rgba(41, 197, 240, 0.44);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            padding: 15px;
+        }
+
+        .faq-item h3 {
+            color: #2c3e50;
+            cursor: pointer;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .faq-item p {
+            color:#555555;
+            display: none;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .faq-item.active p {
+            display: block;
+        }
+
+        .container .btn {
+            background-color: 	#FF3CAC;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .container .btn:hover {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Frequently Asked Questions (FAQ)</h1>
+
+    <!-- FAQ item 1 -->
+    <div class="faq-item">
+        <h3> What makes GlowUp different from other skincare brands?</h3>
+        <p>GlowUp is all about real results and real confidence. Our products are clean, cruelty-free, and made for Gen Z skin — no harsh stuff, no overhype. Just skincare that works, feels good, and fits into your glow-up journey.
+
+        </p>
+    </div>
+
+    <!-- FAQ item 2 -->
+    <div class="faq-item">
+        <h3>Are GlowUp products suitable for all skin types?</h3>
+        <p>Yes! Every formula is created with sensitivity in mind and tested across different skin types. Whether you're oily, dry, combo, or breakout-prone, we’ve got your glow covered.</p>
+    </div>
+
+    <!-- FAQ item 3 -->
+    <div class="faq-item">
+        <h3> Are your products vegan and cruelty-free?</h3>
+        <p>Absolutely. GlowUp is 100% cruelty-free and most of our products are vegan. We believe beauty should never come at the expense of animals — period.
+
+        </p>
+    </div>
+
+    <!-- FAQ item 4 -->
+    <div class="faq-item">
+        <h3>How should I build a skincare routine with GlowUp products?</h3>
+        <p>Start simple: Cleanser → Serum → Moisturizer → SPF (daytime only). You can mix and match depending on your skin’s vibe. Not sure where to start? Check out our “Routine Builder” coming soon!
+
+        </p>
+    </div>
+
+    <!-- FAQ item 5 -->
+    <div class="faq-item">
+        <h3>Where do you ship to?</h3>
+        <p>We currently ship within Kenya, but we're working on going global soon! Sign up for updates and be the first to know when we launch in your area.</p>
+    </div>
+
+      <!-- FAQ item 6 -->
+      <div class="faq-item">
+        <h3> Can I return a product if it doesn’t work for me?</h3>
+        <p>Yes — we offer a 14-day satisfaction guarantee. If something doesn’t vibe with your skin, hit us up at support@glowupbeauty.com and we’ll make it right.
+
+        </p>
+    </div>
+
+    <div class="text-center">
+        <a href="index.html" class="btn">Shop Now</a>
+    </div>
+</div>
+
+<script>
+    // Toggle FAQ items
+    document.querySelectorAll('.faq-item h3').forEach(function (faq) {
+        faq.addEventListener('click', function () {
+            this.parentElement.classList.toggle('active');
+        });
+    });
+</script>
+
+<!-- Footer Section -->
+<footer id="footer">
+    <div class="footer-content">
+      <h3>GlowUp</h3>
+      <p>Glow today. Shine tomorrow. Confidence always.</p>
+  
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </div>
+  
+      <div class="social-icons">
+        <a href="https://instagram.com/yourhandle" target="_blank">Instagram</a>
+        <a href="https://tiktok.com/@yourhandle" target="_blank">TikTok</a>
+        <a href="mailto:youremail@example.com">Email</a>
+      </div>
+    </div>
+  
+    <p class="copyright">© 2025 GlowUp. All rights reserved.</p>
+  </footer>
+  
+  <style>
+    #footer {
+      background-color: #ffe6f0;
+      color: #333;
+      padding: 60px 20px 30px;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+    }
+  
+    .footer-content h3 {
+      color: #ff3cac;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+  
+    .footer-content p {
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      color: #555;
+    }
+  
+    .footer-links,
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+  
+    .footer-links a,
+    .social-icons a {
+      color: #784ba0;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+  
+    .footer-links a:hover,
+    .social-icons a:hover {
+      color: #ff3cac;
+    }
+  
+    .copyright {
+      font-size: 0.8rem;
+      color: #888;
+      margin-top: 10px;
+    }
+  </style>
+
+ 
